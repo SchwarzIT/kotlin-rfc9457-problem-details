@@ -5,7 +5,7 @@ The `Kotlin-RFC9457-Problem-Details` library implements `application/problem+jso
 ## Features
   - provides all necessary interfaces and serialisers to implement [RFC 9457](https://datatracker.ietf.org/doc/rfc9457/)
   - provides a centralised approach to error objects to normalise REST APIs
-  - conforms to `application/problem+json
+  - conforms to `application/problem+json`
 
 ## Installation
 
