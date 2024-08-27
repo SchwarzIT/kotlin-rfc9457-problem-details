@@ -1,0 +1,7 @@
+# ignorefile for Azure DevOps Publish and download artifacts task (https://docs.microsoft.com/en-us/azure/devops/pipelines/artifacts/pipeline-artifacts?view=azure-devops&tabs=yaml-task)
+
+.artifactignore
+.git
+
+# SonarQube scanner folder
+.scannerwork
