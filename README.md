@@ -1,6 +1,6 @@
 # Problem
 
-The `Problem` library implements `application/problem+json` according to [RFC 9457](https://datatracker.ietf.org/doc/rfc9457/) in Kotlin. Problem provides all necessary interfaces and builders to comply with the RFC.
+The `Kotlin-RFC9457-Problem-Details` library implements `application/problem+json` according to [RFC 9457](https://datatracker.ietf.org/doc/rfc9457/) in Kotlin. Problem-Details provides all necessary interfaces and builders to comply with the RFC.
 
 ## Features
   - provides all necessary interfaces and serialisers to implement [RFC 9457](https://datatracker.ietf.org/doc/rfc9457/)
@@ -11,7 +11,7 @@ The `Problem` library implements `application/problem+json` according to [RFC 94
 
 ```kotlin
 dependencies {
-    implementation("schwarz.it:problem:$problemVersion")
+    implementation("schwarz.it:kotlin-rfc9457-problem-details:$problemDetailsVersion")
 }
 ```
 
@@ -33,7 +33,7 @@ install(StatusPages) {
     exception<IllegalArgumentException> { call, cause ->
         val httpStatus = HttpStatusCode.BadRequest
         val problem = Problem.of(
-            httpStatus, 
+            httpStatus,
             "problem/illegal-argument-error.html",
             cause.message,
             "https://example.org"
@@ -75,9 +75,9 @@ This will produce in the following json
 If you want to add some more information and a problem type the following can be used:
 ```kotlin
 Problem.of(
-    HttpStatusCode.BadRequest, 
-    "problem/illegal-argument-error.html", 
-    "Parameter is mandatory", 
+    HttpStatusCode.BadRequest,
+    "problem/illegal-argument-error.html",
+    "Parameter is mandatory",
     "https://example.org"
 )
 ```
