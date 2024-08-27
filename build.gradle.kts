@@ -3,7 +3,7 @@ val kotestVersion: String by project
 
 plugins {
     kotlin("jvm") version "2.0.0"
-    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.0"
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.20"
     id("maven-publish")
     id("jacoco")
 }
