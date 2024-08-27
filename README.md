@@ -1,4 +1,4 @@
-# Problem
+# Kotlin-RFC9457-problem-details
 
 The `Kotlin-RFC9457-Problem-Details` library implements `application/problem+json` according to [RFC 9457](https://datatracker.ietf.org/doc/rfc9457/) in Kotlin. Problem-Details provides all necessary interfaces and builders to comply with the RFC.
 
