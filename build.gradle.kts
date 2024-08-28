@@ -2,10 +2,10 @@ val ktorVersion: String by project
 val kotestVersion: String by project
 
 plugins {
-   kotlin("jvm") version "2.0.0"
-   id("org.jetbrains.kotlin.plugin.serialization") version "2.0.0"
-   id("maven-publish")
-   id("jacoco")
+    kotlin("jvm") version "2.0.0"
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.0"
+    id("maven-publish")
+    id("jacoco")
 }
 
 group = "schwarz.it"
