@@ -1,5 +1,11 @@
 # Kotlin-RFC9457-problem-details
 
+[![SIT](https://img.shields.io/badge/SIT-awesome-blueviolet.svg)](https://jobs.schwarz)
+![GitHub kotlin version](https://img.shields.io/badge/kotlin-2.0.20-green)
+![License](https://img.shields.io/github/license/SchwarzIT/kotlin-rfc9457-problem-details)
+![GitHub last commit](https://img.shields.io/github/last-commit/SchwarzIT/kotlin-rfc9457-problem-details)
+
+
 The `Kotlin-RFC9457-Problem-Details` library implements `application/problem+json` according to [RFC 9457](https://datatracker.ietf.org/doc/rfc9457/) in Kotlin. Problem-Details provides all necessary interfaces and builders to comply with the RFC.
 
 ## Features
