@@ -1,6 +1,9 @@
 package schwarz.it.problem.details
 
+import io.ktor.http.ContentType
 import io.ktor.http.HttpStatusCode
+import io.ktor.server.application.ApplicationCall
+import io.ktor.server.response.respondText
 import kotlinx.serialization.json.Json
 
 /**
@@ -12,6 +15,20 @@ private const val TYPE_DEFAULT = "about:blank"
  * Construct a Problem Detail after RFC 9457
  */
 public fun problem(block: ProblemBuilder.() -> Unit): Problem = ProblemBuilder().apply(block).build()
+
+/**
+ * Application Call extension in order to return problem details with correct content type in ktor
+ */
+suspend fun ApplicationCall.respondProblem(
+   status: HttpStatusCode,
+   problem: Problem,
+) {
+   respondText(
+      problem.toJson(),
+      ContentType.Application.ProblemJson,
+      status,
+   )
+}
 
 /**
  * Builder for a problem detail including all mutable components

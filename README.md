@@ -38,11 +38,7 @@ install(StatusPages) {
             cause.message,
             "https://example.org"
         )
-        call.respondText(
-            problem.toJson(),
-            ContentType.Application.ProblemJson,
-            httpStatus,
-        )
+        call.respondProblem(httpStatus, problem)
     }
 }
 ```
