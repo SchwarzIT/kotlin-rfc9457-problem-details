@@ -122,5 +122,6 @@ This will produce in the following json
 
 - kotlin
 - ktor serialization kotlinx json
+- ktor server core
 - kotest
 - kotlin serialization plugin
