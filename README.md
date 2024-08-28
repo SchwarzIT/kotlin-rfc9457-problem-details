@@ -1,4 +1,4 @@
-# Kotlin-RFC9457-problem-details
+# Kotlin-RFC9457-Problem-Details
 
 [![SIT](https://img.shields.io/badge/SIT-awesome-blueviolet.svg)](https://jobs.schwarz)
 ![GitHub kotlin version](https://img.shields.io/badge/kotlin-2.0.20-green)
