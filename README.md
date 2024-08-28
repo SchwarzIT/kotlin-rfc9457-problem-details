@@ -26,7 +26,7 @@ We recommend using the library in combination with the `io.ktor:ktor-server-stat
 
 The following example uses the problem library in order to handle an `IllegalArgumentException` thrown by your application within the status pages handler.
 
-`respondText` is used in order to set the content type to `application/problem+json`.
+`respondProblem` is used in order to set the content type to `application/problem+json`.
 
 ```kotlin
 install(StatusPages) {
