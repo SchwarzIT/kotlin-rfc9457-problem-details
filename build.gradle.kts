@@ -1,14 +1,16 @@
+import com.vanniktech.maven.publish.SonatypeHost.Companion.S01
+
 val ktorVersion: String by project
 val kotestVersion: String by project
 
 plugins {
    kotlin("jvm") version "2.0.20"
    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.20"
-   id("maven-publish")
    id("jacoco")
+   id("com.vanniktech.maven.publish") version "0.29.0"
 }
 
-group = "schwarz.it"
+group = "io.github.schwarzit"
 version = "1.0.0"
 
 repositories {
@@ -32,21 +34,32 @@ kotlin {
    jvmToolchain(21)
 }
 
-publishing {
-   publications {
-      create<MavenPublication>("mavenPublication") {
-         from(components["java"])
-      }
-   }
-   repositories {
-      maven {
-         name = "artifactory"
-         credentials {
-            username = project.findProperty("artifactoryUsername") as String? ?: System.getenv("ARTIFACTORY_USER")
-            password =
-               project.findProperty("artifactoryPassword") as String? ?: System.getenv("ARTIFACTORY_PASSWORD")
+mavenPublishing {
+   publishToMavenCentral(S01)
+   coordinates(group.toString(), "kotlin-rfc9457-problem-details", version.toString())
+   pom {
+      name.set("Kotlin-RFC9457-Problem-Details")
+      description.set("A Kotlin implementation of the RFC 9457 problem details format for handling HTTP API errors.")
+      inceptionYear.set("2024")
+      url.set("https://github.com/SchwarzIT/kotlin-rfc9457-problem-details")
+      licenses {
+         license {
+            name.set("The Apache License, Version 2.0")
+            url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+            distribution.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
          }
-         url = uri("https://schwarzit.jfrog.io/artifactory/xx-sit-odj-psftp-maven-release-local/")
+      }
+      developers {
+         developer {
+            name.set("Johannes Hepp")
+            url.set("https://github.com/johanneshepp")
+         }
+      }
+
+      scm {
+         url.set("https://github.com/SchwarzIT/kotlin-rfc9457-problem-details")
+         connection.set("scm:git:git://github.com/SchwarzIT/kotlin-rfc9457-problem-details.git")
+         developerConnection.set("scm:git:ssh://git@github.com/SchwarzIT/kotlin-rfc9457-problem-details.git")
       }
    }
 }
