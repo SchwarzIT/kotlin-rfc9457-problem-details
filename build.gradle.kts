@@ -1,4 +1,4 @@
-import com.vanniktech.maven.publish.SonatypeHost.Companion.CENTRAL_PORTAL
+import com.vanniktech.maven.publish.SonatypeHost.Companion.S01
 
 val ktorVersion: String by project
 val kotestVersion: String by project
@@ -35,7 +35,7 @@ kotlin {
 }
 
 mavenPublishing {
-   publishToMavenCentral(CENTRAL_PORTAL)
+   publishToMavenCentral(S01)
    coordinates(group.toString(), "kotlin-rfc9457-problem-details", version.toString())
    pom {
       name.set("Kotlin-RFC9457-Problem-Details")

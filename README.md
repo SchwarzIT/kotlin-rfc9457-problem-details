@@ -17,7 +17,7 @@ The `Kotlin-RFC9457-Problem-Details` library implements `application/problem+jso
 
 ```kotlin
 dependencies {
-    implementation("schwarz.it:kotlin-rfc9457-problem-details:$problemDetailsVersion")
+    implementation("io.github.schwarzit:kotlin-rfc9457-problem-details:$problemDetailsVersion")
 }
 ```
 
