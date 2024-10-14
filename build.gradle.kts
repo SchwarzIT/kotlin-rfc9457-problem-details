@@ -4,7 +4,7 @@ val ktorVersion: String by project
 val kotestVersion: String by project
 
 plugins {
-   kotlin("jvm") version "2.0.20"
+   kotlin("jvm") version "2.0.21"
    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.20"
    id("jacoco")
    id("com.vanniktech.maven.publish") version "0.29.0"
