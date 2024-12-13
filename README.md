@@ -1,7 +1,7 @@
 # Kotlin-RFC9457-Problem-Details
 
 [![SIT](https://img.shields.io/badge/SIT-awesome-blueviolet.svg)](https://jobs.schwarz)
-![GitHub kotlin version](https://img.shields.io/badge/kotlin-2.0.20-green)
+![GitHub kotlin version](https://img.shields.io/badge/kotlin-3.0.2-green)
 ![License](https://img.shields.io/github/license/SchwarzIT/kotlin-rfc9457-problem-details)
 ![GitHub last commit](https://img.shields.io/github/last-commit/SchwarzIT/kotlin-rfc9457-problem-details)
 
