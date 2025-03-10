@@ -7,7 +7,7 @@ plugins {
    kotlin("jvm") version "2.1.0"
    id("org.jetbrains.kotlin.plugin.serialization") version "2.1.0"
    id("jacoco")
-   id("com.vanniktech.maven.publish") version "0.30.0"
+   id("com.vanniktech.maven.publish") version "0.31.0"
 }
 
 group = "io.github.schwarzit"
